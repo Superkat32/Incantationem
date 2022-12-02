@@ -27,8 +27,8 @@
     "incantationem.mixins.json"
   ],
   "depends": {
+    "minecraft": ">=1.19.3-rc.1",
     "fabricloader": ">=0.13.3",
-    "fabric": "*",
-    "minecraft": "1.19.x"
+    "fabric-api": "*"
   }
 }

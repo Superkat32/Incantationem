@@ -1,18 +1,17 @@
 package me.luligabi.incantationem;
 
-import me.luligabi.incantationem.enchantment.VenomousEnchantment;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Style;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.math.random.Random;
-import net.minecraft.util.registry.Registry;
-
 
 public class Util {
 
@@ -50,7 +49,7 @@ public class Util {
 
 
     public static Enchantment initEnchantment(String id, Enchantment enchantment) {
-        return Registry.register(Registry.ENCHANTMENT, Incantationem.modId(id), enchantment);
+        return Registry.register(Registries.ENCHANTMENT, Incantationem.modId(id), enchantment);
     }
 
 }
