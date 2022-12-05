@@ -16,32 +16,40 @@ import net.minecraft.item.ItemStack;
 /*
  * Original idea by u/nonexistnt @ https://reddit.com/r/minecraftsuggestions/comments/kpqs0r/new_enchantment_bane_of_the_swine/
  */
-public class SwineBaneEnchantment extends Enchantment {
+public class BaneOfTheSwineEnchantment extends IncantationemEnchantment {
 
-    public SwineBaneEnchantment() {
-        super(Rarity.UNCOMMON, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND});
+    public BaneOfTheSwineEnchantment() {
+        super(
+                Rarity.UNCOMMON,
+                EnchantmentTarget.WEAPON,
+                new EquipmentSlot[]{EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND},
+                Incantationem.CONFIG.baneOfTheSwineMaxLevel,
+                Incantationem.CONFIG.baneOfTheSwineAvailableForBookOffer,
+                Incantationem.CONFIG.baneOfTheSwineAvailableRandomly
+        );
     }
 
+    @Override
     public int getMinPower(int level) {
         return 20 + 20 * (level - 1);
     }
 
+    @Override
     public int getMaxPower(int level) {
         return super.getMinPower(level) + 60;
     }
 
-    public int getMaxLevel() {
-        return 5;
-    }
-
+    @Override
     public boolean canAccept(Enchantment enchantment) {
         return !(enchantment instanceof DamageEnchantment);
     }
 
+    @Override
     public boolean isAcceptableItem(ItemStack stack) {
         return super.isAcceptableItem(stack) || stack.getItem() instanceof AxeItem;
     }
 
+    @Override
     public float getAttackDamage(int level, EntityGroup group) { // TODO: Change group check for a tag check if method signature changes accordingly
         return group == Incantationem.SWINE ? (float)level * 2.5F : 0.0F;
     }
@@ -56,4 +64,5 @@ public class SwineBaneEnchantment extends Enchantment {
             }
         }
     }
+
 }

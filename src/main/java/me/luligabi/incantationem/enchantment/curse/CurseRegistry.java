@@ -1,4 +1,4 @@
-package me.luligabi.incantationem.curse;
+package me.luligabi.incantationem.enchantment.curse;
 
 import me.luligabi.incantationem.Util;
 import net.minecraft.enchantment.Enchantment;

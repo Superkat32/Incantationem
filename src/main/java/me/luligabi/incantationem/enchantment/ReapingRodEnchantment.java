@@ -1,7 +1,7 @@
 package me.luligabi.incantationem.enchantment;
 
+import me.luligabi.incantationem.Incantationem;
 import me.luligabi.incantationem.Util;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
@@ -11,19 +11,26 @@ import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
-public class ReapingRodEnchantment extends Enchantment {
+public class ReapingRodEnchantment extends IncantationemEnchantment {
 
     public ReapingRodEnchantment() {
-        super(Rarity.VERY_RARE, EnchantmentTarget.FISHING_ROD, new EquipmentSlot[]{EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND});
+        super(
+                Rarity.VERY_RARE,
+                EnchantmentTarget.FISHING_ROD,
+                new EquipmentSlot[]{EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND},
+                Incantationem.CONFIG.reapingRodMaxLevel,
+                Incantationem.CONFIG.reapingRodAvailableForBookOffer,
+                Incantationem.CONFIG.reapingRodAvailableRandomly
+        );
     }
 
+    @Override
     public int getMinPower(int level) { return 29; }
 
+    @Override
     public int getMaxPower(int level) {
         return 50;
     }
-
-    public int getMaxLevel() { return 1; }
 
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
@@ -37,4 +44,5 @@ public class ReapingRodEnchantment extends Enchantment {
         }
         super.onTargetDamaged(user, target, level);
     }
+
 }

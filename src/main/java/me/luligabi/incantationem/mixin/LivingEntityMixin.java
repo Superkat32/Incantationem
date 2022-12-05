@@ -2,12 +2,10 @@ package me.luligabi.incantationem.mixin;
 
 import me.luligabi.incantationem.Util;
 import me.luligabi.incantationem.enchantment.MagneticEnchantment;
-import me.luligabi.incantationem.curse.CurseRegistry;
+import me.luligabi.incantationem.enchantment.curse.CurseRegistry;
 import me.luligabi.incantationem.enchantment.EnchantmentRegistry;
 import me.luligabi.incantationem.tag.TagRegistry;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffects;
@@ -15,8 +13,6 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
-import java.util.Arrays;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin {

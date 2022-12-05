@@ -1,7 +1,7 @@
 package me.luligabi.incantationem.enchantment;
 
+import me.luligabi.incantationem.Incantationem;
 import me.luligabi.incantationem.Util;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
@@ -10,20 +10,30 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
-public class DecayEnchantment extends Enchantment {
+public class DecayEnchantment extends IncantationemEnchantment {
 
     public DecayEnchantment() {
-        super(Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND});
+        super(
+                Rarity.RARE,
+                EnchantmentTarget.WEAPON,
+                new EquipmentSlot[]{EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND},
+                Incantationem.CONFIG.decayMaxLevel,
+                Incantationem.CONFIG.decayAvailableForBookOffer,
+                Incantationem.CONFIG.decayAvailableRandomly
+        );
     }
 
+    @Override
     public int getMinPower(int level) {
         return 10 + 30 * (level - 1);
     }
 
+    @Override
     public int getMaxPower(int level) {
         return super.getMinPower(level) + 50;
     }
 
+    @Override
     public int getMaxLevel() {
         return 3;
     }
@@ -38,4 +48,5 @@ public class DecayEnchantment extends Enchantment {
         }
         super.onTargetDamaged(user, attacker, level);
     }
+
 }

@@ -1,5 +1,6 @@
 package me.luligabi.incantationem.enchantment;
 
+import me.luligabi.incantationem.Incantationem;
 import me.luligabi.incantationem.Util;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
@@ -10,22 +11,26 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
-public class LastStandEnchantment extends Enchantment {
+public class LastStandEnchantment extends IncantationemEnchantment {
 
     public LastStandEnchantment() {
-        super(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR_CHEST, new EquipmentSlot[]{EquipmentSlot.CHEST});
+        super(
+                Enchantment.Rarity.RARE,
+                EnchantmentTarget.ARMOR_CHEST,
+                new EquipmentSlot[]{EquipmentSlot.CHEST},
+                Incantationem.CONFIG.lastStandMaxLevel,
+                Incantationem.CONFIG.lastStandAvailableForBookOffer,
+                Incantationem.CONFIG.lastStandAvailableRandomly
+        );
     }
 
+    @Override
     public int getMinPower(int level) { return 10 + 20 * (level - 1); }
 
+    @Override
     public int getMaxPower(int level) {
         return 50;
     }
-
-    public int getMaxLevel() {
-        return 3;
-    }
-
 
     @Override
     public void onUserDamaged(LivingEntity user, Entity attacker, int level) {
@@ -37,4 +42,5 @@ public class LastStandEnchantment extends Enchantment {
             super.onUserDamaged(user, attacker, level);
         }
     }
+
 }

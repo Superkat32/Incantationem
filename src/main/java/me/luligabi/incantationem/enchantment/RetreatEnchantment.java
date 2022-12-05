@@ -1,7 +1,7 @@
 package me.luligabi.incantationem.enchantment;
 
+import me.luligabi.incantationem.Incantationem;
 import me.luligabi.incantationem.Util;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
@@ -10,22 +10,27 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
-public class RetreatEnchantment extends Enchantment {
+public class RetreatEnchantment extends IncantationemEnchantment {
 
     public RetreatEnchantment() {
-        super(Rarity.UNCOMMON, EnchantmentTarget.ARMOR_LEGS, new EquipmentSlot[]{EquipmentSlot.LEGS});
+        super(
+                Rarity.UNCOMMON,
+                EnchantmentTarget.ARMOR_LEGS,
+                new EquipmentSlot[]{EquipmentSlot.LEGS},
+                Incantationem.CONFIG.retreatMaxLevel,
+                Incantationem.CONFIG.retreatAvailableForBookOffer,
+                Incantationem.CONFIG.retreatAvailableRandomly
+        );
     }
 
+    @Override
     public int getMinPower(int level) {
         return 10 + 20 * (level - 1);
     }
 
+    @Override
     public int getMaxPower(int level) {
         return super.getMinPower(level) + 50;
-    }
-
-    public int getMaxLevel() {
-        return 1;
     }
 
     @Override
@@ -36,4 +41,5 @@ public class RetreatEnchantment extends Enchantment {
         }
         super.onUserDamaged(user, attacker, level);
     }
+
 }

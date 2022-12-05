@@ -7,7 +7,7 @@ import net.minecraft.enchantment.Enchantment;
 public class EnchantmentRegistry {
 
     public static Enchantment BUNNYS_HOP = Util.initEnchantment("bunnys_hop", new BunnysHopEnchantment());
-    public static Enchantment SWINE_BANE = Util.initEnchantment("swine_bane", new SwineBaneEnchantment());
+    public static Enchantment SWINE_BANE = Util.initEnchantment("swine_bane", new BaneOfTheSwineEnchantment());
     public static Enchantment CHARMED = Util.initEnchantment("charmed", new CharmedEnchantment());
     public static Enchantment DECAY = Util.initEnchantment("decay", new DecayEnchantment());
     public static Enchantment FORGING_TOUCH =Util.initEnchantment("forging_touch", new ForgingTouchEnchantment());

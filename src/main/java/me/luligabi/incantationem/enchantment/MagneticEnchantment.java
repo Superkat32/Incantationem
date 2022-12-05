@@ -1,6 +1,6 @@
 package me.luligabi.incantationem.enchantment;
 
-import net.minecraft.enchantment.Enchantment;
+import me.luligabi.incantationem.Incantationem;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.*;
 import net.minecraft.util.math.BlockPos;
@@ -10,23 +10,29 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class MagneticEnchantment extends Enchantment {
+public class MagneticEnchantment extends IncantationemEnchantment {
 
     public MagneticEnchantment() {
-        super(Rarity.VERY_RARE, EnchantmentTarget.ARMOR_LEGS, new EquipmentSlot[]{EquipmentSlot.LEGS});
+        super(
+                Rarity.VERY_RARE,
+                EnchantmentTarget.ARMOR_LEGS,
+                new EquipmentSlot[]{EquipmentSlot.LEGS},
+                Incantationem.CONFIG.magneticMaxLevel,
+                Incantationem.CONFIG.magneticAvailableForBookOffer,
+                Incantationem.CONFIG.magneticAvailableRandomly
+        );
     }
 
+    @Override
     public int getMinPower(int level) {
         return 10 + 20 * (level - 1);
     }
 
+    @Override
     public int getMaxPower(int level) {
         return super.getMinPower(level) + 50;
     }
 
-    public int getMaxLevel() {
-        return 3;
-    }
 
     public static void magnetize(LivingEntity entity, World world, int level) {
         Vec3d pos = entity.getPos();
@@ -40,4 +46,5 @@ public class MagneticEnchantment extends Enchantment {
             e.addVelocity(velocity.x, velocity.y, velocity.z);
         }
     }
+
 }

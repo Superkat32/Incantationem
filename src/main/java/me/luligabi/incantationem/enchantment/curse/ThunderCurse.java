@@ -1,7 +1,8 @@
-package me.luligabi.incantationem.curse;
+package me.luligabi.incantationem.enchantment.curse;
 
+import me.luligabi.incantationem.Incantationem;
 import me.luligabi.incantationem.Util;
-import net.minecraft.enchantment.Enchantment;
+import me.luligabi.incantationem.enchantment.IncantationemEnchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.*;
 import net.minecraft.text.Text;
@@ -9,25 +10,34 @@ import net.minecraft.util.Formatting;
 import net.minecraft.world.GameRules;
 
 // Curse of the Thunders
-public class ThunderCurse extends Enchantment {
+public class ThunderCurse extends IncantationemEnchantment {
 
     public ThunderCurse() {
-        super(Rarity.VERY_RARE, EnchantmentTarget.ARMOR_HEAD, new EquipmentSlot[]{EquipmentSlot.HEAD});
+        super(
+                Rarity.VERY_RARE,
+                EnchantmentTarget.ARMOR_HEAD,
+                new EquipmentSlot[]{EquipmentSlot.HEAD},
+                Incantationem.CONFIG.thunderAvailableRandomly,
+                Incantationem.CONFIG.thunderAvailableAsTreasure
+        );
     }
 
-    public int getMinPower(int level) { return level * 25; }
-
-    public int getMaxPower(int level) { return this.getMinPower(level) + 50; }
-
-    public int getMaxLevel() { return 1; }
-
-    public boolean isTreasure() { return true; }
-
-    public boolean isCursed() { return true; }
-
-    public boolean isAvailableForEnchantedBookOffer() {
-        return false;
+    @Override
+    public int getMinPower(int level) {
+        return level * 25;
     }
+
+    @Override
+    public int getMaxPower(int level) {
+        return this.getMinPower(level) + 50;
+    }
+
+    @Override
+    public boolean isCursed() {
+        return true;
+    }
+
+
 
     @Override
     public void onUserDamaged(LivingEntity user, Entity attacker, int level) {
@@ -41,4 +51,5 @@ public class ThunderCurse extends Enchantment {
         }
         super.onUserDamaged(user, attacker, level);
     }
+
 }

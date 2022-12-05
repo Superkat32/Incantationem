@@ -2,7 +2,7 @@ package me.luligabi.incantationem.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import me.luligabi.incantationem.Util;
-import me.luligabi.incantationem.curse.CurseRegistry;
+import me.luligabi.incantationem.enchantment.curse.CurseRegistry;
 import me.luligabi.incantationem.enchantment.EnchantmentRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
