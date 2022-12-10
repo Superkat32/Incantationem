@@ -1,4 +1,4 @@
-package me.luligabi.incantationem;
+package me.luligabi.incantationem.common;
 
 public class ModConfig {
 
@@ -8,69 +8,76 @@ public class ModConfig {
      */
     // Bane of The Swine
     public int baneOfTheSwineMaxLevel = 5;
-    public boolean baneOfTheSwineAvailableForBookOffer = true;
     public boolean baneOfTheSwineAvailableRandomly = true;
+    public boolean baneOfTheSwineAvailableForBookOffer = true;
+    public boolean baneOfTheSwineAvailableAsTreasure = false;
 
     // Bunny's Hop
     public int bunnysHopMaxLevel = 3;
-    public boolean bunnysHopAvailableForBookOffer = true;
     public boolean bunnysHopAvailableRandomly = true;
+    public boolean bunnysHopAvailableForBookOffer = true;
+    public boolean bunnysHopAvailableAsTreasure = false;
 
     // Charmed
-    public int charmedMaxLevel = 1;
-    public boolean charmedAvailableForBookOffer = true;
     public boolean charmedAvailableRandomly = true;
+    public boolean charmedAvailableForBookOffer = true;
+    public boolean charmedAvailableAsTreasure = false;
 
     // Decay
     public int decayMaxLevel = 3;
-    public boolean decayAvailableForBookOffer = true;
     public boolean decayAvailableRandomly = true;
+    public boolean decayAvailableForBookOffer = true;
+    public boolean decayAvailableAsTreasure = false;
 
     // Forging Touch
     public int forgingTouchMaxLevel = 3;
-    public boolean forgingTouchAvailableForBookOffer = true;
     public boolean forgingTouchAvailableRandomly = true;
+    public boolean forgingTouchAvailableForBookOffer = true;
     public boolean forgingTouchAvailableAsTreasure = true;
 
     // Last Stand
     public int lastStandMaxLevel = 3;
-    public boolean lastStandAvailableForBookOffer = true;
     public boolean lastStandAvailableRandomly = true;
+    public boolean lastStandAvailableForBookOffer = true;
+    public boolean lastStandAvailableAsTreasure = false;
 
     // Magnetic
     public int magneticMaxLevel = 3;
-    public boolean magneticAvailableForBookOffer = true;
     public boolean magneticAvailableRandomly = true;
+    public boolean magneticAvailableForBookOffer = true;
+    public boolean magneticAvailableAsTreasure = false;
 
     // Reaping Rod
-    public int reapingRodMaxLevel = 1;
-    public boolean reapingRodAvailableForBookOffer = true;
     public boolean reapingRodAvailableRandomly = true;
+    public boolean reapingRodAvailableForBookOffer = true;
+    public boolean reapingRodAvailableAsTreasure = false;
 
     // Retreat
-    public int retreatMaxLevel = 1;
-    public boolean retreatAvailableForBookOffer = true;
     public boolean retreatAvailableRandomly = true;
+    public boolean retreatAvailableForBookOffer = true;
+    public boolean retreatAvailableAsTreasure = false;
 
     // Venomous
     public int venomousMaxLevel = 3;
-    public boolean venomousAvailableForBookOffer = true;
     public boolean venomousAvailableRandomly = true;
+    public boolean venomousAvailableForBookOffer = true;
+    public boolean venomousAvailableAsTreasure = false;
 
 
     /*
      * CURSES
      */
     // Curse of Recklessness
-    public boolean recklessnessAvailableRandomly = true;
+    public boolean recklessnessAvailableForBookOffer = true;
     public boolean recklessnessAvailableAsTreasure = true;
 
     // Curse of the Thunders
-    public boolean thunderAvailableRandomly = true;
+    public boolean thunderAvailableForBookOffer = true;
     public boolean thunderAvailableAsTreasure = true;
 
     // Curse of Tough Luck
-    public boolean toughLuckAvailableRandomly = true;
+    public boolean toughLuckAvailableForBookOffer = true;
     public boolean toughLuckAvailableAsTreasure = true;
+
 
 }

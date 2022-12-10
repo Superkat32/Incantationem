@@ -1,6 +1,6 @@
-package me.luligabi.incantationem.enchantment;
+package me.luligabi.incantationem.common.enchantment;
 
-import me.luligabi.incantationem.Incantationem;
+import me.luligabi.incantationem.common.Incantationem;
 import net.minecraft.enchantment.DamageEnchantment;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
@@ -25,7 +25,8 @@ public class BaneOfTheSwineEnchantment extends IncantationemEnchantment {
                 new EquipmentSlot[]{EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND},
                 Incantationem.CONFIG.baneOfTheSwineMaxLevel,
                 Incantationem.CONFIG.baneOfTheSwineAvailableForBookOffer,
-                Incantationem.CONFIG.baneOfTheSwineAvailableRandomly
+                Incantationem.CONFIG.baneOfTheSwineAvailableRandomly,
+                Incantationem.CONFIG.baneOfTheSwineAvailableAsTreasure
         );
     }
 

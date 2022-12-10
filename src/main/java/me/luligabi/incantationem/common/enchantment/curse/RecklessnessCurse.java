@@ -1,8 +1,8 @@
-package me.luligabi.incantationem.enchantment.curse;
+package me.luligabi.incantationem.common.enchantment.curse;
 
-import me.luligabi.incantationem.Incantationem;
-import me.luligabi.incantationem.enchantment.EnchantmentRegistry;
-import me.luligabi.incantationem.enchantment.IncantationemEnchantment;
+import me.luligabi.incantationem.common.Incantationem;
+import me.luligabi.incantationem.common.enchantment.EnchantmentRegistry;
+import me.luligabi.incantationem.common.enchantment.IncantationemEnchantment;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.enchantment.Enchantments;
@@ -18,7 +18,9 @@ public class RecklessnessCurse extends IncantationemEnchantment {
                 Rarity.VERY_RARE,
                 EnchantmentTarget.DIGGER,
                 new EquipmentSlot[]{EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND},
-                Incantationem.CONFIG.recklessnessAvailableRandomly,
+                1,
+                Incantationem.CONFIG.recklessnessAvailableForBookOffer,
+                true,
                 Incantationem.CONFIG.recklessnessAvailableAsTreasure
         );
     }

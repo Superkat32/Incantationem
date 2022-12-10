@@ -1,11 +1,11 @@
-package me.luligabi.incantationem;
+package me.luligabi.incantationem.common;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonParser;
-import me.luligabi.incantationem.enchantment.curse.CurseRegistry;
-import me.luligabi.incantationem.enchantment.EnchantmentRegistry;
-import me.luligabi.incantationem.tag.TagRegistry;
+import me.luligabi.incantationem.common.enchantment.curse.CurseRegistry;
+import me.luligabi.incantationem.common.enchantment.EnchantmentRegistry;
+import me.luligabi.incantationem.common.tag.TagRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.entity.EntityGroup;

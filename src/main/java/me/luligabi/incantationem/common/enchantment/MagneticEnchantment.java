@@ -1,6 +1,6 @@
-package me.luligabi.incantationem.enchantment;
+package me.luligabi.incantationem.common.enchantment;
 
-import me.luligabi.incantationem.Incantationem;
+import me.luligabi.incantationem.common.Incantationem;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.*;
 import net.minecraft.util.math.BlockPos;
@@ -19,7 +19,8 @@ public class MagneticEnchantment extends IncantationemEnchantment {
                 new EquipmentSlot[]{EquipmentSlot.LEGS},
                 Incantationem.CONFIG.magneticMaxLevel,
                 Incantationem.CONFIG.magneticAvailableForBookOffer,
-                Incantationem.CONFIG.magneticAvailableRandomly
+                Incantationem.CONFIG.magneticAvailableRandomly,
+                Incantationem.CONFIG.magneticAvailableAsTreasure
         );
     }
 

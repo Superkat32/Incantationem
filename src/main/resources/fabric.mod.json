@@ -17,10 +17,13 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "me.luligabi.incantationem.Incantationem"
+      "me.luligabi.incantationem.common.Incantationem"
     ],
     "preLaunch": [
       "com.llamalad7.mixinextras.MixinExtrasBootstrap::init"
+    ],
+    "modmenu": [
+      "me.luligabi.incantationem.client.compat.modmenu.ConfigScreenEntrypoint"
     ]
   },
   "mixins": [

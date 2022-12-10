@@ -1,8 +1,8 @@
-package me.luligabi.incantationem.enchantment.curse;
+package me.luligabi.incantationem.common.enchantment.curse;
 
-import me.luligabi.incantationem.Incantationem;
-import me.luligabi.incantationem.enchantment.EnchantmentRegistry;
-import me.luligabi.incantationem.enchantment.IncantationemEnchantment;
+import me.luligabi.incantationem.common.Incantationem;
+import me.luligabi.incantationem.common.enchantment.EnchantmentRegistry;
+import me.luligabi.incantationem.common.enchantment.IncantationemEnchantment;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
@@ -14,7 +14,8 @@ public class ToughLuckCurse extends IncantationemEnchantment {
                 Rarity.VERY_RARE,
                 EnchantmentTarget.BREAKABLE,
                 EquipmentSlot.values(),
-                Incantationem.CONFIG.toughLuckAvailableRandomly,
+                Incantationem.CONFIG.toughLuckAvailableForBookOffer,
+                true,
                 Incantationem.CONFIG.toughLuckAvailableAsTreasure
         );
     }

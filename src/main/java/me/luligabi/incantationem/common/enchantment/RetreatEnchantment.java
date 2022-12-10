@@ -1,7 +1,7 @@
-package me.luligabi.incantationem.enchantment;
+package me.luligabi.incantationem.common.enchantment;
 
-import me.luligabi.incantationem.Incantationem;
-import me.luligabi.incantationem.Util;
+import me.luligabi.incantationem.common.Incantationem;
+import me.luligabi.incantationem.common.Util;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
@@ -17,9 +17,9 @@ public class RetreatEnchantment extends IncantationemEnchantment {
                 Rarity.UNCOMMON,
                 EnchantmentTarget.ARMOR_LEGS,
                 new EquipmentSlot[]{EquipmentSlot.LEGS},
-                Incantationem.CONFIG.retreatMaxLevel,
                 Incantationem.CONFIG.retreatAvailableForBookOffer,
-                Incantationem.CONFIG.retreatAvailableRandomly
+                Incantationem.CONFIG.retreatAvailableRandomly,
+                Incantationem.CONFIG.retreatAvailableAsTreasure
         );
     }
 

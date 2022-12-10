@@ -1,4 +1,4 @@
-package me.luligabi.incantationem.tag;
+package me.luligabi.incantationem.common.tag;
 
 import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryKeys;

@@ -1,7 +1,7 @@
-package me.luligabi.incantationem.enchantment;
+package me.luligabi.incantationem.common.enchantment;
 
-import me.luligabi.incantationem.Incantationem;
-import me.luligabi.incantationem.enchantment.curse.CurseRegistry;
+import me.luligabi.incantationem.common.Incantationem;
+import me.luligabi.incantationem.common.enchantment.curse.CurseRegistry;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;

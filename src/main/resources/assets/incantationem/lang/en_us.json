@@ -35,9 +35,24 @@
   "enchantment.incantationem.retreat.desc": "Randomly grants speed when the user is hit.",
   "enchantment.incantationem.venomous.desc": "Randomly applies poison to hit entities.",
 
-
   "enchantment.incantationem.recklessness.desc": "Makes all broken blocks not drop at all.",
   "enchantment.incantationem.thunder.desc": "Randomly strikes the user with a thunderbolt after they're hit.",
-  "enchantment.incantationem.tough_luck.desc": "Grants permanent unluck effect while using it, decreasing your odds on luck-based events."
+  "enchantment.incantationem.tough_luck.desc": "Grants permanent unluck effect while using it, decreasing your odds on luck-based events.",
+
+
+  "configCategory.incantationem.enchantment": "Enchantments",
+  "configCategory.incantationem.curse": "Curses",
+
+  "configOption.incantationem.maxLevel": "Maximum Level",
+  "configOption.incantationem.maxLevel.tooltip": "The maximum level this enchantment can be by normal means",
+
+  "configOption.incantationem.availableRandomly": "Available randomly?",
+  "configOption.incantationem.availableRandomly.tooltip": "Allows this enchantment to be obtainable via the Enchanting Table and low-tiered loot chests",
+
+  "configOption.incantationem.availableForBookOffer": "Available for Book Offers?",
+  "configOption.incantationem.availableForBookOffer.tooltip": "Allows this enchantment to be obtainable via Villager trades",
+
+  "configOption.incantationem.availableAsTreasure": "Available as Treasure?",
+  "configOption.incantationem.availableAsTreasure.tooltip": "Allows this enchantment to be obtainable via high-tiered loot chests"
 
 }

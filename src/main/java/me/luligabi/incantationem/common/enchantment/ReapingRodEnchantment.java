@@ -1,7 +1,7 @@
-package me.luligabi.incantationem.enchantment;
+package me.luligabi.incantationem.common.enchantment;
 
-import me.luligabi.incantationem.Incantationem;
-import me.luligabi.incantationem.Util;
+import me.luligabi.incantationem.common.Incantationem;
+import me.luligabi.incantationem.common.Util;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
@@ -18,9 +18,9 @@ public class ReapingRodEnchantment extends IncantationemEnchantment {
                 Rarity.VERY_RARE,
                 EnchantmentTarget.FISHING_ROD,
                 new EquipmentSlot[]{EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND},
-                Incantationem.CONFIG.reapingRodMaxLevel,
                 Incantationem.CONFIG.reapingRodAvailableForBookOffer,
-                Incantationem.CONFIG.reapingRodAvailableRandomly
+                Incantationem.CONFIG.reapingRodAvailableRandomly,
+                Incantationem.CONFIG.reapingRodAvailableAsTreasure
         );
     }
 

@@ -1,10 +1,10 @@
 package me.luligabi.incantationem.mixin;
 
-import me.luligabi.incantationem.Util;
-import me.luligabi.incantationem.enchantment.MagneticEnchantment;
-import me.luligabi.incantationem.enchantment.curse.CurseRegistry;
-import me.luligabi.incantationem.enchantment.EnchantmentRegistry;
-import me.luligabi.incantationem.tag.TagRegistry;
+import me.luligabi.incantationem.common.Util;
+import me.luligabi.incantationem.common.enchantment.MagneticEnchantment;
+import me.luligabi.incantationem.common.enchantment.curse.CurseRegistry;
+import me.luligabi.incantationem.common.enchantment.EnchantmentRegistry;
+import me.luligabi.incantationem.common.tag.TagRegistry;
 import net.minecraft.block.BlockState;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;

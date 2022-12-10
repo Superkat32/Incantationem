@@ -1,6 +1,6 @@
-package me.luligabi.incantationem.enchantment;
+package me.luligabi.incantationem.common.enchantment;
 
-import me.luligabi.incantationem.Incantationem;
+import me.luligabi.incantationem.common.Incantationem;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
@@ -14,7 +14,8 @@ public class BunnysHopEnchantment extends IncantationemEnchantment {
                 new EquipmentSlot[]{EquipmentSlot.FEET},
                 Incantationem.CONFIG.bunnysHopMaxLevel,
                 Incantationem.CONFIG.bunnysHopAvailableForBookOffer,
-                Incantationem.CONFIG.bunnysHopAvailableRandomly
+                Incantationem.CONFIG.bunnysHopAvailableRandomly,
+                Incantationem.CONFIG.bunnysHopAvailableAsTreasure
         );
     }
 

@@ -1,7 +1,7 @@
-package me.luligabi.incantationem.enchantment;
+package me.luligabi.incantationem.common.enchantment;
 
-import me.luligabi.incantationem.Incantationem;
-import me.luligabi.incantationem.Util;
+import me.luligabi.incantationem.common.Incantationem;
+import me.luligabi.incantationem.common.Util;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
@@ -19,7 +19,8 @@ public class DecayEnchantment extends IncantationemEnchantment {
                 new EquipmentSlot[]{EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND},
                 Incantationem.CONFIG.decayMaxLevel,
                 Incantationem.CONFIG.decayAvailableForBookOffer,
-                Incantationem.CONFIG.decayAvailableRandomly
+                Incantationem.CONFIG.decayAvailableRandomly,
+                Incantationem.CONFIG.decayAvailableAsTreasure
         );
     }
 

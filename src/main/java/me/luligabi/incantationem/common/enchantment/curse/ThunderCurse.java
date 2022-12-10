@@ -1,8 +1,8 @@
-package me.luligabi.incantationem.enchantment.curse;
+package me.luligabi.incantationem.common.enchantment.curse;
 
-import me.luligabi.incantationem.Incantationem;
-import me.luligabi.incantationem.Util;
-import me.luligabi.incantationem.enchantment.IncantationemEnchantment;
+import me.luligabi.incantationem.common.Incantationem;
+import me.luligabi.incantationem.common.Util;
+import me.luligabi.incantationem.common.enchantment.IncantationemEnchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.*;
 import net.minecraft.text.Text;
@@ -17,7 +17,8 @@ public class ThunderCurse extends IncantationemEnchantment {
                 Rarity.VERY_RARE,
                 EnchantmentTarget.ARMOR_HEAD,
                 new EquipmentSlot[]{EquipmentSlot.HEAD},
-                Incantationem.CONFIG.thunderAvailableRandomly,
+                Incantationem.CONFIG.thunderAvailableForBookOffer,
+                true,
                 Incantationem.CONFIG.thunderAvailableAsTreasure
         );
     }

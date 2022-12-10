@@ -1,4 +1,4 @@
-package me.luligabi.incantationem;
+package me.luligabi.incantationem.common;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.LivingEntity;

@@ -1,7 +1,7 @@
-package me.luligabi.incantationem.enchantment;
+package me.luligabi.incantationem.common.enchantment;
 
-import me.luligabi.incantationem.Incantationem;
-import me.luligabi.incantationem.Util;
+import me.luligabi.incantationem.common.Incantationem;
+import me.luligabi.incantationem.common.Util;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
@@ -20,7 +20,8 @@ public class LastStandEnchantment extends IncantationemEnchantment {
                 new EquipmentSlot[]{EquipmentSlot.CHEST},
                 Incantationem.CONFIG.lastStandMaxLevel,
                 Incantationem.CONFIG.lastStandAvailableForBookOffer,
-                Incantationem.CONFIG.lastStandAvailableRandomly
+                Incantationem.CONFIG.lastStandAvailableRandomly,
+                Incantationem.CONFIG.lastStandAvailableAsTreasure
         );
     }
 

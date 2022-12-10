@@ -1,4 +1,4 @@
-package me.luligabi.incantationem.enchantment;
+package me.luligabi.incantationem.common.enchantment;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
@@ -14,14 +14,8 @@ public abstract class IncantationemEnchantment extends Enchantment {
         this.availableAsTreasure = availableAsTreasure;
     }
 
-    // Non-treasure enchantments
-    public IncantationemEnchantment(Rarity weight, EnchantmentTarget type, EquipmentSlot[] slotTypes, int maxLevel, boolean availableForBookOffer, boolean availableRandomly) {
-        this(weight, type, slotTypes, maxLevel, availableForBookOffer, availableRandomly, false);
-    }
-
-    // Curses
-    public IncantationemEnchantment(Rarity weight, EnchantmentTarget type, EquipmentSlot[] slotTypes, boolean availableRandomly, boolean availableAsTreasure) {
-        this(weight, type, slotTypes, 1, false, availableRandomly, availableAsTreasure);
+    public IncantationemEnchantment(Rarity weight, EnchantmentTarget type, EquipmentSlot[] slotTypes, boolean availableForBookOffer, boolean availableRandomly, boolean availableAsTreasure) {
+        this(weight, type, slotTypes, 1, availableForBookOffer, availableRandomly, availableAsTreasure);
     }
 
 

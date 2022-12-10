@@ -1,6 +1,6 @@
 package me.luligabi.incantationem.mixin;
 
-import me.luligabi.incantationem.Incantationem;
+import me.luligabi.incantationem.common.Incantationem;
 import net.minecraft.entity.EntityGroup;
 import net.minecraft.entity.mob.PiglinEntity;
 import org.spongepowered.asm.mixin.Mixin;
