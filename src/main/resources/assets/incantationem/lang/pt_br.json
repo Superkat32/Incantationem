@@ -38,6 +38,23 @@
 
   "enchantment.incantationem.recklessness.desc": "Faz com que blocos quebrados não sejam coletáveis.",
   "enchantment.incantationem.thunder.desc": "Trovões cairão aleatoriamente no usuário após ser machucado.",
-  "enchantment.incantationem.tough_luck.desc": "Garante permanentemente o efeito de Má Sorte enquanto usa, diminuindo suas chances em eventos de sorte."
+  "enchantment.incantationem.tough_luck.desc": "Garante permanentemente o efeito de Má Sorte enquanto usa, diminuindo suas chances em eventos de sorte.",
+
+
+  "configCategory.incantationem.enchantment": "Encantamentos",
+  "configCategory.incantationem.curse": "Maldições",
+
+  "configOption.incantationem.maxLevel": "Nível máximo",
+  "configOption.incantationem.maxLevel.tooltip": "Nível máximo que este encantamento pode alcançar normalmente.",
+
+  "configOption.incantationem.availableRandomly": "Disponível Aleatoriamente?",
+  "configOption.incantationem.availableRandomly.tooltip": "Permite encontrar este encantamento na Mesa de Encantamentos e baús de loot comuns",
+
+  "configOption.incantationem.availableForBookOffer": "Disponível em Trocas de Livros?",
+  "configOption.incantationem.availableForBookOffer.tooltip": "Permite encontrar este encantamento em trocas de Aldeões",
+
+  "configOption.incantationem.availableAsTreasure": "Disponível como Tesouro?",
+  "configOption.incantationem.availableAsTreasure.tooltip": "Permite encontrar este encantamento em baús de loot raros"
+
 
 }
