@@ -38,6 +38,23 @@
 
   "enchantment.incantationem.recklessness.desc": "破坏方块没有掉落物。",
   "enchantment.incantationem.thunder.desc": "受攻击时有概率用闪电劈玩家。",
-  "enchantment.incantationem.tough_luck.desc": "提供不幸效果，几乎是“庇佑”效果的反转版。"
+  "enchantment.incantationem.tough_luck.desc": "提供不幸效果，几乎是“庇佑”效果的反转版。",
+  
+
+  "configcategory.incantationem.enchantment": "附魔",
+  "configCategory.incantationem.curse": "诅咒",
+
+  "configOption.incantationem.maxLevel": "最大等级",
+  "configOption.incantationem.maxLevel.tooltip": "最大等级指该附魔一般情况下可以达到的最大值",
+
+  "configOption.incantationem.availableRandomly": "允许随机得到吗？",
+  "configOption.incantationem.availableRandomly.tooltip": "允许该附魔通过附魔台附魔、在低等级的战利品箱子中搜刮得到",
+
+  "configOption.incantationem.availableForBookOffer": "允许村民交易得到吗？",
+  "configOption.incantationem.availableForBookOffer.tooltip": "允许该附魔出现在村民交易中",
+
+  "configOption.incantationem.availableAsTreasure": "允许作为宝藏附魔出现吗？",
+  "configOption.incantationem.availableAsTreasure.tooltip": "允许该附魔出现在非常高层级的战利品箱子中"
+
 
 }
