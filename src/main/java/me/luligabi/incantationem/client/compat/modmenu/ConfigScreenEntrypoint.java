@@ -24,6 +24,51 @@ public class ConfigScreenEntrypoint implements ModMenuApi {
         /*
          * ENCHANTMENTS
          */
+        // Bane of Ender
+        Option<Integer> baneOfEnderMaxLevel = Option.<Integer>createBuilder()
+                .name(Text.translatable("configOption.incantationem.maxLevel"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.maxLevel.tooltip")))
+                .binding(
+                        5,
+                        () -> config.baneOfEnderMaxLevel,
+                        newValue -> config.baneOfEnderMaxLevel = newValue
+                )
+                .controller(option -> IntegerFieldControllerBuilder.create(option).range(1, 10))
+                .build();
+
+        Option<Boolean> baneOfEnderAvailableRandomly = Option.<Boolean>createBuilder()
+                .name(Text.translatable("configOption.incantationem.availableRandomly"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.availableRandomly.tooltip")))
+                .binding(
+                        true,
+                        () -> config.baneOfEnderAvailableRandomly,
+                        newValue -> config.baneOfEnderAvailableRandomly = newValue
+                )
+                .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
+                .build();
+
+        Option<Boolean> baneOfEnderAvailableForBookOffer = Option.<Boolean>createBuilder()
+                .name(Text.translatable("configOption.incantationem.availableForBookOffer"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.availableForBookOffer.tooltip")))
+                .binding(
+                        true,
+                        () -> config.baneOfEnderAvailableForBookOffer,
+                        newValue -> config.baneOfEnderAvailableForBookOffer = newValue
+                )
+                .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
+                .build();
+
+        Option<Boolean> baneOfEnderAvailableAsTreasure = Option.<Boolean>createBuilder()
+                .name(Text.translatable("configOption.incantationem.availableAsTreasure"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.availableAsTreasure.tooltip")))
+                .binding(
+                        false,
+                        () -> config.baneOfEnderAvailableAsTreasure,
+                        newValue -> config.baneOfEnderAvailableAsTreasure = newValue
+                )
+                .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
+                .build();
+
         // Bane of The Swine
         Option<Integer> baneOfTheSwineMaxLevel = Option.<Integer>createBuilder()
                 .name(Text.translatable("configOption.incantationem.maxLevel"))
@@ -518,6 +563,15 @@ public class ConfigScreenEntrypoint implements ModMenuApi {
                 .title(Text.of("Incantationem"))
                 .category(ConfigCategory.createBuilder()
                         .name(Text.translatable("configCategory.incantationem.enchantment"))
+                        .group(
+                                createEnchantmentGroup(
+                                        "ender_bane",
+                                        baneOfEnderMaxLevel,
+                                        baneOfEnderAvailableRandomly,
+                                        baneOfEnderAvailableForBookOffer,
+                                        baneOfEnderAvailableAsTreasure
+                                )
+                        )
                         .group(
                                 createEnchantmentGroup(
                                     "swine_bane",

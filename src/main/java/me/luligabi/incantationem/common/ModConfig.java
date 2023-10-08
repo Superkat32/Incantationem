@@ -12,6 +12,12 @@ public class ModConfig {
     public boolean baneOfTheSwineAvailableForBookOffer = true;
     public boolean baneOfTheSwineAvailableAsTreasure = false;
 
+    // Bane of Ender
+    public int baneOfEnderMaxLevel = 5;
+    public boolean baneOfEnderAvailableRandomly = true;
+    public boolean baneOfEnderAvailableForBookOffer = true;
+    public boolean baneOfEnderAvailableAsTreasure = false;
+
     // Bunny's Hop
     public int bunnysHopMaxLevel = 3;
     public boolean bunnysHopAvailableRandomly = true;

@@ -3,8 +3,8 @@ package me.luligabi.incantationem.common;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonParser;
-import me.luligabi.incantationem.common.enchantment.curse.CurseRegistry;
 import me.luligabi.incantationem.common.enchantment.EnchantmentRegistry;
+import me.luligabi.incantationem.common.enchantment.curse.CurseRegistry;
 import me.luligabi.incantationem.common.tag.TagRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
@@ -36,6 +36,7 @@ public class Incantationem implements ModInitializer {
     public static final String MOD_ID = "incantationem";
 
     public static final EntityGroup SWINE = new EntityGroup();
+    public static final EntityGroup ENDER = new EntityGroup();
 
 
     private static ModConfig createConfig() {
