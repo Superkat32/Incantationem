@@ -1,7 +1,6 @@
 package me.luligabi.incantationem.common.enchantment;
 
 import me.luligabi.incantationem.common.Incantationem;
-import net.minecraft.enchantment.DamageEnchantment;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
@@ -42,7 +41,7 @@ public class BaneOfTheSwineEnchantment extends IncantationemEnchantment {
 
     @Override
     public boolean canAccept(Enchantment enchantment) {
-        return !(enchantment instanceof DamageEnchantment);
+        return !(enchantment instanceof BaneOfTheSwineEnchantment);
     }
 
     @Override
