@@ -328,6 +328,40 @@ public class ConfigScreenEntrypoint implements ModMenuApi {
                 .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
                 .build();
 
+        //Loot & Scoot
+        Option<Boolean> lootAndScootAvailableRandomly = Option.<Boolean>createBuilder()
+                .name(Text.translatable("configOption.incantationem.availableRandomly"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.availableRandomly.tooltip")))
+                .binding(
+                        false,
+                        () -> config.lootAndScootAvailableRandomly,
+                        newValue -> config.lootAndScootAvailableRandomly = newValue
+                )
+                .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
+                .build();
+
+        Option<Boolean> lootAndScootAvailableForBookOffer = Option.<Boolean>createBuilder()
+                .name(Text.translatable("configOption.incantationem.availableForBookOffer"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.availableForBookOffer.tooltip")))
+                .binding(
+                        true,
+                        () -> config.lootAndScootAvailableForBookOffer,
+                        newValue -> config.lootAndScootAvailableForBookOffer = newValue
+                )
+                .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
+                .build();
+
+        Option<Boolean> lootAndScootAvailableAsTreasure = Option.<Boolean>createBuilder()
+                .name(Text.translatable("configOption.incantationem.availableAsTreasure"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.availableAsTreasure.tooltip")))
+                .binding(
+                        true,
+                        () -> config.lootAndScootAvailableAsTreasure,
+                        newValue -> config.lootAndScootAvailableAsTreasure = newValue
+                )
+                .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
+                .build();
+
         // Magnetic
         Option<Integer> magneticMaxLevel = Option.<Integer>createBuilder()
                 .name(Text.translatable("configOption.incantationem.maxLevel"))
@@ -623,6 +657,14 @@ public class ConfigScreenEntrypoint implements ModMenuApi {
                                         lastStandAvailableRandomly,
                                         lastStandAvailableForBookOffer,
                                         lastStandAvailableAsTreasure
+                                )
+                        )
+                        .group(
+                                createLevellessEnchantmentGroup(
+                                        "loot_scoot",
+                                        lootAndScootAvailableRandomly,
+                                        lootAndScootAvailableForBookOffer,
+                                        lootAndScootAvailableAsTreasure
                                 )
                         )
                         .group(

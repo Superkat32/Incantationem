@@ -13,6 +13,7 @@ public class EnchantmentRegistry {
     public static Enchantment DECAY = Util.initEnchantment("decay", new DecayEnchantment());
     public static Enchantment FORGING_TOUCH =Util.initEnchantment("forging_touch", new ForgingTouchEnchantment());
     public static Enchantment LAST_STAND = Util.initEnchantment("last_stand", new LastStandEnchantment());
+    public static Enchantment LOOT_SCOOT = Util.initEnchantment("loot_scoot", new LootAndScootEnchantment());
     public static Enchantment MAGNETIC = Util.initEnchantment("magnetic", new MagneticEnchantment());
     public static Enchantment REAPING_ROD = Util.initEnchantment("reaping_rod", new ReapingRodEnchantment());
     public static Enchantment RETREAT = Util.initEnchantment("retreat", new RetreatEnchantment());

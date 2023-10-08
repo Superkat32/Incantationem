@@ -6,17 +6,17 @@ public class ModConfig {
     /*
      * ENCHANTMENTS
      */
-    // Bane of The Swine
-    public int baneOfTheSwineMaxLevel = 5;
-    public boolean baneOfTheSwineAvailableRandomly = true;
-    public boolean baneOfTheSwineAvailableForBookOffer = true;
-    public boolean baneOfTheSwineAvailableAsTreasure = false;
-
     // Bane of Ender
     public int baneOfEnderMaxLevel = 5;
     public boolean baneOfEnderAvailableRandomly = true;
     public boolean baneOfEnderAvailableForBookOffer = true;
     public boolean baneOfEnderAvailableAsTreasure = false;
+
+    // Bane of The Swine
+    public int baneOfTheSwineMaxLevel = 5;
+    public boolean baneOfTheSwineAvailableRandomly = true;
+    public boolean baneOfTheSwineAvailableForBookOffer = true;
+    public boolean baneOfTheSwineAvailableAsTreasure = false;
 
     // Bunny's Hop
     public int bunnysHopMaxLevel = 3;
@@ -46,6 +46,11 @@ public class ModConfig {
     public boolean lastStandAvailableRandomly = true;
     public boolean lastStandAvailableForBookOffer = true;
     public boolean lastStandAvailableAsTreasure = false;
+
+    // Loot & Scoot
+    public boolean lootAndScootAvailableRandomly = false;
+    public boolean lootAndScootAvailableForBookOffer = true;
+    public boolean lootAndScootAvailableAsTreasure = true;
 
     // Magnetic
     public int magneticMaxLevel = 3;

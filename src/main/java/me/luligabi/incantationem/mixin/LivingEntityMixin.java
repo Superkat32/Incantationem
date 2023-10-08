@@ -1,9 +1,9 @@
 package me.luligabi.incantationem.mixin;
 
 import me.luligabi.incantationem.common.Util;
+import me.luligabi.incantationem.common.enchantment.EnchantmentRegistry;
 import me.luligabi.incantationem.common.enchantment.MagneticEnchantment;
 import me.luligabi.incantationem.common.enchantment.curse.CurseRegistry;
-import me.luligabi.incantationem.common.enchantment.EnchantmentRegistry;
 import me.luligabi.incantationem.common.tag.TagRegistry;
 import net.minecraft.block.BlockState;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -32,6 +32,8 @@ public abstract class LivingEntityMixin {
 
         int toughLuckLevel = EnchantmentHelper.getEquipmentLevel(CurseRegistry.TOUGH_LUCK, livingEntity);
 
+        int lootAndScootLevel = EnchantmentHelper.getEquipmentLevel(EnchantmentRegistry.LOOT_SCOOT, livingEntity);
+
         if(bunnysHopLevel > 0) {
             if(livingEntity.hasStatusEffect(StatusEffects.JUMP_BOOST)) return;
             BlockState floor = livingEntity.getWorld().getBlockState(((EntityInvoker) livingEntity).invokeGetVelocityAffectingPos());
@@ -51,6 +53,15 @@ public abstract class LivingEntityMixin {
         }
         if(toughLuckLevel > 0) {
             Util.applyEffectIfNotPresent(livingEntity, StatusEffects.UNLUCK, 3, 0);
+            callbackInfo.cancel();
+        }
+        if(lootAndScootLevel > 0) {
+            if(livingEntity.hasStatusEffect(StatusEffects.SPEED)) return;
+            BlockState floor = livingEntity.getWorld().getBlockState(((EntityInvoker) livingEntity).invokeGetVelocityAffectingPos());
+
+            if(floor.isIn(TagRegistry.COMMON_STONE)) {
+                Util.applyEffectIfNotPresent(livingEntity, StatusEffects.SPEED, 4, 1);
+            }
             callbackInfo.cancel();
         }
     }
