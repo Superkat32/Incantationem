@@ -29,6 +29,12 @@ public class ModConfig {
     public boolean charmedAvailableForBookOffer = true;
     public boolean charmedAvailableAsTreasure = false;
 
+    // Critical Strike
+    public int criticalStrikeMaxLevel = 3;
+    public boolean criticalStrikeAvailableRandomly = false;
+    public boolean criticalStrikeAvailableForBookOffer = true;
+    public boolean criticalStrikeAvailableAsTreasure = true;
+
     // Decay
     public int decayMaxLevel = 3;
     public boolean decayAvailableRandomly = true;

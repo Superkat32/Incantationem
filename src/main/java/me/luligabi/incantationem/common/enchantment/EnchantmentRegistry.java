@@ -10,6 +10,7 @@ public class EnchantmentRegistry {
     public static Enchantment SWINE_BANE = Util.initEnchantment("swine_bane", new BaneOfTheSwineEnchantment());
     public static Enchantment ENDER_BANE = Util.initEnchantment("ender_bane", new BaneOfEnderEnchantment());
     public static Enchantment CHARMED = Util.initEnchantment("charmed", new CharmedEnchantment());
+    public static Enchantment CRITICAL_STRIKE = Util.initEnchantment("critical_strike", new CriticalStrikeEnchantment());
     public static Enchantment DECAY = Util.initEnchantment("decay", new DecayEnchantment());
     public static Enchantment FORGING_TOUCH =Util.initEnchantment("forging_touch", new ForgingTouchEnchantment());
     public static Enchantment LAST_STAND = Util.initEnchantment("last_stand", new LastStandEnchantment());

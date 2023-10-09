@@ -193,6 +193,51 @@ public class ConfigScreenEntrypoint implements ModMenuApi {
                 .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
                 .build();
 
+        // Critical Strike
+        Option<Integer> criticalStrikeMaxLevel = Option.<Integer>createBuilder()
+                .name(Text.translatable("configOption.incantationem.maxLevel"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.maxLevel.tooltip")))
+                .binding(
+                        3,
+                        () -> config.criticalStrikeMaxLevel,
+                        newValue -> config.criticalStrikeMaxLevel = newValue
+                )
+                .controller(option -> IntegerFieldControllerBuilder.create(option).min(1).max(10))
+                .build();
+
+        Option<Boolean> criticalStrikeAvailableRandomly = Option.<Boolean>createBuilder()
+                .name(Text.translatable("configOption.incantationem.availableRandomly"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.availableRandomly.tooltip")))
+                .binding(
+                        false,
+                        () -> config.criticalStrikeAvailableRandomly,
+                        newValue -> config.criticalStrikeAvailableRandomly = newValue
+                )
+                .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
+                .build();
+
+        Option<Boolean> criticalStrikeAvailableForBookOffer = Option.<Boolean>createBuilder()
+                .name(Text.translatable("configOption.incantationem.availableForBookOffer"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.availableForBookOffer.tooltip")))
+                .binding(
+                        true,
+                        () -> config.criticalStrikeAvailableForBookOffer,
+                        newValue -> config.criticalStrikeAvailableForBookOffer = newValue
+                )
+                .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
+                .build();
+
+        Option<Boolean> criticalStrikeAvailableAsTreasure = Option.<Boolean>createBuilder()
+                .name(Text.translatable("configOption.incantationem.availableAsTreasure"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.availableAsTreasure.tooltip")))
+                .binding(
+                        true,
+                        () -> config.criticalStrikeAvailableAsTreasure,
+                        newValue -> config.criticalStrikeAvailableAsTreasure = newValue
+                )
+                .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
+                .build();
+
         // Decay
         Option<Integer> decayMaxLevel = Option.<Integer>createBuilder()
                 .name(Text.translatable("configOption.incantationem.maxLevel"))
@@ -630,6 +675,15 @@ public class ConfigScreenEntrypoint implements ModMenuApi {
                                         charmedAvailableRandomly,
                                         charmedAvailableForBookOffer,
                                         charmedAvailableAsTreasure
+                                )
+                        )
+                        .group(
+                                createEnchantmentGroup(
+                                        "critical_strike",
+                                        criticalStrikeMaxLevel,
+                                        criticalStrikeAvailableRandomly,
+                                        criticalStrikeAvailableForBookOffer,
+                                        criticalStrikeAvailableAsTreasure
                                 )
                         )
                         .group(
