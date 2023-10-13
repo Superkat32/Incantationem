@@ -41,6 +41,12 @@ public class ModConfig {
     public boolean decayAvailableForBookOffer = true;
     public boolean decayAvailableAsTreasure = false;
 
+    // Deflection
+    public int deflectionMaxLevel = 3;
+    public boolean deflectionAvailableRandomly = true;
+    public boolean deflectionAvailableForBookOffer = true;
+    public boolean deflectionAvailableAsTreasure = false;
+
     // Forging Touch
     public int forgingTouchMaxLevel = 3;
     public boolean forgingTouchAvailableRandomly = true;

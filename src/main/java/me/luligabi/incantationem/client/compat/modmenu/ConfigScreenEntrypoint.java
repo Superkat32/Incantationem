@@ -283,6 +283,51 @@ public class ConfigScreenEntrypoint implements ModMenuApi {
                 .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
                 .build();
 
+        // Deflection
+        Option<Integer> deflectionMaxLevel = Option.<Integer>createBuilder()
+                .name(Text.translatable("configOption.incantationem.maxLevel"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.maxLevel.tooltip")))
+                .binding(
+                        3,
+                        () -> config.deflectionMaxLevel,
+                        newValue -> config.deflectionMaxLevel = newValue
+                )
+                .controller(option -> IntegerFieldControllerBuilder.create(option).min(1).max(10))
+                .build();
+
+        Option<Boolean> deflectionAvailableRandomly = Option.<Boolean>createBuilder()
+                .name(Text.translatable("configOption.incantationem.availableRandomly"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.availableRandomly.tooltip")))
+                .binding(
+                        true,
+                        () -> config.deflectionAvailableRandomly,
+                        newValue -> config.deflectionAvailableRandomly = newValue
+                )
+                .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
+                .build();
+
+        Option<Boolean> deflectionAvailableForBookOffer = Option.<Boolean>createBuilder()
+                .name(Text.translatable("configOption.incantationem.availableForBookOffer"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.availableForBookOffer.tooltip")))
+                .binding(
+                        true,
+                        () -> config.deflectionAvailableForBookOffer,
+                        newValue -> config.deflectionAvailableForBookOffer = newValue
+                )
+                .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
+                .build();
+
+        Option<Boolean> deflectionAvailableAsTreasure = Option.<Boolean>createBuilder()
+                .name(Text.translatable("configOption.incantationem.availableAsTreasure"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.availableAsTreasure.tooltip")))
+                .binding(
+                        false,
+                        () -> config.deflectionAvailableAsTreasure,
+                        newValue -> config.deflectionAvailableAsTreasure = newValue
+                )
+                .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
+                .build();
+
         // Forging Touch
         Option<Integer> forgingTouchMaxLevel = Option.<Integer>createBuilder()
                 .name(Text.translatable("configOption.incantationem.maxLevel"))
@@ -693,6 +738,15 @@ public class ConfigScreenEntrypoint implements ModMenuApi {
                                         decayAvailableRandomly,
                                         decayAvailableForBookOffer,
                                         decayAvailableAsTreasure
+                                )
+                        )
+                        .group(
+                                createEnchantmentGroup(
+                                        "deflection",
+                                        deflectionMaxLevel,
+                                        deflectionAvailableRandomly,
+                                        deflectionAvailableForBookOffer,
+                                        deflectionAvailableAsTreasure
                                 )
                         )
                         .group(

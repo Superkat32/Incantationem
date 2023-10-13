@@ -5,6 +5,7 @@
   "enchantment.incantationem.charmed": "Charmed",
   "enchantment.incantationem.critical_strike": "Critical Strike",
   "enchantment.incantationem.decay": "Decay",
+  "enchantment.incantationem.deflection": "Deflection",
   "enchantment.incantationem.forging_touch": "Forging Touch",
   "enchantment.incantationem.last_stand": "Last Stand",
   "enchantment.incantationem.loot_scoot": "Loot & Scoot",
@@ -19,6 +20,7 @@
 
 
   "message.incantationem.decay.applied": "* Decay effect applied! *",
+  "message.incantationem.deflection.applied": "* Deflection effect applied! *",
   "message.incantationem.critical_strike.applied": "* Critical Strike effect applied! *",
   "message.incantationem.forging_touch.applied": "* Forging Touch effect applied! *",
   "message.incantationem.last_stand.applied": "* Last Stand effect applied! *",
@@ -34,6 +36,7 @@
   "enchantment.incantationem.charmed.desc": "Increases loot quality while fishing and your luck with Incantationem's enchantments/curses.",
   "enchantment.incantationem.critical_strike.desc": "Gives a random chance of dealing extra damage, with the level of the enchantment affecting both the chance and damage that gets dealt.",
   "enchantment.incantationem.decay.desc": "Randomly inflicts withering to hit entities.",
+  "enchantment.incantationem.deflection.desc": "Gives a chance of deflecting arrows that would otherwise damage an entity.",
   "enchantment.incantationem.forging_touch.desc": "Broken blocks randomly drop their smelted counterpart (e.g. sand -> glass).",
   "enchantment.incantationem.last_stand.desc": "Randomly applies strength to the user when on low health.",
   "enchantment.incantationem.loot_scoot.desc": "Grants a small speed boost while standing on most stone blocks, such as stone, deepslate, and end stone.",
