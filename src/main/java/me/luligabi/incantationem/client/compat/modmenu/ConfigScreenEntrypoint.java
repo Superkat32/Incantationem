@@ -328,6 +328,51 @@ public class ConfigScreenEntrypoint implements ModMenuApi {
                 .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
                 .build();
 
+        // Explosive
+        Option<Integer> explosiveMaxLevel = Option.<Integer>createBuilder()
+                .name(Text.translatable("configOption.incantationem.maxLevel"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.maxLevel.tooltip")))
+                .binding(
+                        3,
+                        () -> config.explosiveMaxLevel,
+                        newValue -> config.explosiveMaxLevel = newValue
+                )
+                .controller(option -> IntegerFieldControllerBuilder.create(option).min(1).max(10))
+                .build();
+
+        Option<Boolean> explosiveAvailableRandomly = Option.<Boolean>createBuilder()
+                .name(Text.translatable("configOption.incantationem.availableRandomly"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.availableRandomly.tooltip")))
+                .binding(
+                        false,
+                        () -> config.explosiveAvailableRandomly,
+                        newValue -> config.explosiveAvailableRandomly = newValue
+                )
+                .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
+                .build();
+
+        Option<Boolean> explosiveAvailableForBookOffer = Option.<Boolean>createBuilder()
+                .name(Text.translatable("configOption.incantationem.availableForBookOffer"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.availableForBookOffer.tooltip")))
+                .binding(
+                        true,
+                        () -> config.explosiveAvailableForBookOffer,
+                        newValue -> config.explosiveAvailableForBookOffer = newValue
+                )
+                .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
+                .build();
+
+        Option<Boolean> explosiveAvailableAsTreasure = Option.<Boolean>createBuilder()
+                .name(Text.translatable("configOption.incantationem.availableAsTreasure"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.availableAsTreasure.tooltip")))
+                .binding(
+                        true,
+                        () -> config.explosiveAvailableAsTreasure,
+                        newValue -> config.explosiveAvailableAsTreasure = newValue
+                )
+                .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
+                .build();
+
         // Forging Touch
         Option<Integer> forgingTouchMaxLevel = Option.<Integer>createBuilder()
                 .name(Text.translatable("configOption.incantationem.maxLevel"))
@@ -747,6 +792,15 @@ public class ConfigScreenEntrypoint implements ModMenuApi {
                                         deflectionAvailableRandomly,
                                         deflectionAvailableForBookOffer,
                                         deflectionAvailableAsTreasure
+                                )
+                        )
+                        .group(
+                                createEnchantmentGroup(
+                                        "explosive",
+                                        explosiveMaxLevel,
+                                        explosiveAvailableRandomly,
+                                        explosiveAvailableForBookOffer,
+                                        explosiveAvailableAsTreasure
                                 )
                         )
                         .group(
