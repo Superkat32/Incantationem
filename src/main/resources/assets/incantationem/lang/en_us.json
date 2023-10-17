@@ -16,6 +16,7 @@
   "enchantment.incantationem.venomous": "Venomous",
 
   "enchantment.incantationem.recklessness": "Curse of Recklessness",
+  "enchantment.incantationem.shrieking": "Curse of Shrieking",
   "enchantment.incantationem.thunder": "Curse of the Thunders",
   "enchantment.incantationem.tough_luck": "Curse of Tough Luck",
 
@@ -48,6 +49,7 @@
   "enchantment.incantationem.venomous.desc": "Randomly applies poison to hit entities.",
 
   "enchantment.incantationem.recklessness.desc": "Makes all broken blocks not drop at all.",
+  "enchantment.incantationem.shrieking.desc": "Increases the amount of warnings given for a single shrieker activation.",
   "enchantment.incantationem.thunder.desc": "Randomly strikes the user with a thunderbolt after they're hit.",
   "enchantment.incantationem.tough_luck.desc": "Grants permanent unluck effect while using it, decreasing your odds on luck-based events.",
 

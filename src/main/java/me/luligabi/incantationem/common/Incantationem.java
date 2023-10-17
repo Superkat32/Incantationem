@@ -26,6 +26,14 @@ public class Incantationem implements ModInitializer {
         EnchantmentRegistry.init();
 
         TagRegistry.init();
+
+        //Registers an unused, vanilla command for setting and clearing the Sculk Shrieker warning level
+        //This isn't really needed, but saves 40 minutes each time you want to test the Curse of Shrieking enchantment
+//        if(FabricLoader.getInstance().isDevelopmentEnvironment()) {
+//            CommandRegistrationCallback.EVENT.register(((dispatcher, registryAccess, environment) -> {
+//                WardenSpawnTrackerCommand.register(dispatcher);
+//            }));
+//        }
     }
 
 

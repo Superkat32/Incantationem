@@ -100,6 +100,10 @@ public class ModConfig {
     public boolean recklessnessAvailableForBookOffer = true;
     public boolean recklessnessAvailableAsTreasure = true;
 
+    // Curse of Shrieking
+    public boolean shriekingAvailableForBookOffer = true;
+    public boolean shriekingAvailableAsTreasure = true;
+
     // Curse of the Thunders
     public boolean thunderAvailableForBookOffer = true;
     public boolean thunderAvailableAsTreasure = true;

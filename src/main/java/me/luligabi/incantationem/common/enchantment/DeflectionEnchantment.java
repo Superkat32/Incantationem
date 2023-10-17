@@ -18,7 +18,7 @@ public class DeflectionEnchantment extends IncantationemEnchantment {
     public DeflectionEnchantment() {
         super(
                 Enchantment.Rarity.RARE,
-                EnchantmentTarget.BREAKABLE,
+                EnchantmentTarget.ARMOR,
                 new EquipmentSlot[]{EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET},
                 Incantationem.CONFIG.deflectionMaxLevel,
                 Incantationem.CONFIG.deflectionAvailableForBookOffer,

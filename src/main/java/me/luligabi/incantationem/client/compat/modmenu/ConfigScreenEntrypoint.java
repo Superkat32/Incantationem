@@ -681,6 +681,29 @@ public class ConfigScreenEntrypoint implements ModMenuApi {
                 .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
                 .build();
 
+        // Curse of Shrieking
+        Option<Boolean> shriekingAvailableForBookOffer = Option.<Boolean>createBuilder()
+                .name(Text.translatable("configOption.incantationem.availableForBookOffer"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.availableForBookOffer.tooltip")))
+                .binding(
+                        true,
+                        () -> config.shriekingAvailableForBookOffer,
+                        newValue -> config.shriekingAvailableForBookOffer = newValue
+                )
+                .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
+                .build();
+
+        Option<Boolean> shriekingAvailableAsTreasure = Option.<Boolean>createBuilder()
+                .name(Text.translatable("configOption.incantationem.availableAsTreasure"))
+                .description(OptionDescription.of(Text.translatable("configOption.incantationem.availableAsTreasure.tooltip")))
+                .binding(
+                        true,
+                        () -> config.shriekingAvailableAsTreasure,
+                        newValue -> config.shriekingAvailableAsTreasure = newValue
+                )
+                .controller(option -> BooleanControllerBuilder.create(option).yesNoFormatter().coloured(true))
+                .build();
+
         // Curse of the Thunders
         Option<Boolean> thunderAvailableForBookOffer = Option.<Boolean>createBuilder()
                 .name(Text.translatable("configOption.incantationem.availableForBookOffer"))
@@ -871,6 +894,13 @@ public class ConfigScreenEntrypoint implements ModMenuApi {
                                         "recklessness",
                                         recklessnessAvailableForBookOffer,
                                         recklessnessAvailableAsTreasure
+                                )
+                        )
+                        .group(
+                                createCurseGroup(
+                                        "shrieking",
+                                        shriekingAvailableForBookOffer,
+                                        shriekingAvailableAsTreasure
                                 )
                         )
                         .group(
